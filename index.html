@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let array = [1,2,3,4,5,5,6,7,7,8,9,10];
+        document.write("The Array: " + array + "<br>");
+
+        // function to sum the array
+        const sumArray = arr => arr.reduce((sum, current) => sum + current, 0)
+        document.write("Sum of the array elements: " + sumArray(array));
+
+        // function to find maximum element
+        const findMax = arr => arr.reduce((max, current) => current > max? current:max, 0)
+        document.write("<br>Maximum element in the array: " + findMax(array));
+        
+        // function to remove duplicates from array
+        const removeDuplicates = arr => arr.filter((x, i) => arr.indexOf(x) === i)
+        document.write("<br>Array without duplicates: " + removeDuplicates(array));
+
+
+        
+        document.write("<br> <br>  string: " + "Hello World!");
+        // function to reverse string
+        const reverseString = str => str.split("").reverse().join("");
+        document.write("<br>Reversed string: " + reverseString("Hello World!"));
+
+        </script>
+</body>
+</html>
